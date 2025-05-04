@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookControlor">
+   <top>
+      <GridPane prefHeight="207.0" prefWidth="859.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.99995117187504" minWidth="10.0" prefWidth="98.79998321533202" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.60003662109378" minWidth="10.0" prefWidth="127.400016784668" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.79998779296875" minWidth="10.0" prefWidth="122.39997558593748" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="24.80000376701355" minHeight="0.0" prefHeight="16.000000715255737" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.6" minHeight="10.0" prefHeight="31.399987792968755" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="79.6" minHeight="10.0" prefHeight="31.399987792968755" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="55.40001831054687" minHeight="0.0" prefHeight="26.39999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="31.600006103515625" minHeight="0.0" prefHeight="23.19999999999999" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="52.19999999999999" minHeight="0.0" prefHeight="34.20001831054688" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="31.79998168945312" minHeight="0.0" prefHeight="31.79998168945312" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="0.0" prefWidth="29.0" text="Email" GridPane.rowIndex="3" />
+            <Label text="Nom" GridPane.rowIndex="1" />
+            <Label text="Prenom" GridPane.rowIndex="2" />
+            <TextField fx:id="tfLastName" prefHeight="26.0" prefWidth="242.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="tfFirstName" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="tfEmail" prefHeight="38.0" prefWidth="222.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="addBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="168.0" text="ajouter a la table" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets left="50.0" right="30.0" />
+         </padding>
+      </GridPane>
+   </top>
+   <bottom>
+      <HBox prefHeight="42.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="removeBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Supprimer" translateX="-20.0" />
+            <Button fx:id="importBtn" layoutX="15.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" text="Importer" translateX="-16.0" />
+            <Button fx:id="exportBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Exporter" translateX="-11.0" />
+            <Button fx:id="quitBtn" mnemonicParsing="true" text="Quite" />
+         </children>
+         <padding>
+            <Insets left="80.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <TableView fx:id="table" maxHeight="212.0" minHeight="212.0" prefHeight="212.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="lastNameCol" prefWidth="96.79998624324799" text="nom" />
+          <TableColumn fx:id="firstNameCol" prefWidth="99.20001983642578" text="prenom" />
+            <TableColumn fx:id="emailCol" prefWidth="255.199951171875" text="email" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
