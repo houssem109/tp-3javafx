@@ -36,7 +36,7 @@
             <TextField fx:id="tfLastName" prefHeight="26.0" prefWidth="242.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <TextField fx:id="tfFirstName" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <TextField fx:id="tfEmail" prefHeight="38.0" prefWidth="222.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#initialize" prefHeight="26.0" prefWidth="168.0" text="ajouter a la table" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+<Button fx:id="addBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="168.0" text="ajouter a la table" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
          <padding>
             <Insets left="50.0" right="30.0" />
