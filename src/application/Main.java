@@ -8,22 +8,22 @@ import javafx.scene.Scene;
 
 
 public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddBook.fxml"));
-            Parent root = loader.load();
-			Scene scene = new Scene(root,600,650);
-
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
-	}
+    
+    @Override
+    public void start(Stage stage) throws Exception {
+        // Charger le fichier FXML
+        Parent root = FXMLLoader.load(getClass().getResource("Etudiant.fxml"));
+        
+        // Créer la scène
+        Scene scene = new Scene(root);
+        
+        // Configurer la fenêtre principale
+        stage.setTitle("Gestion Étudiants");
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
